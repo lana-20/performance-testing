@@ -1,4 +1,74 @@
 # Perfomance Testing
+
+Performance testing is one of the key testing areas in every software development project and especially for mobile apps. Mbile performance testing is a really important and critical part of app development. Mobile users expect an app to start/load within two seconds; otherwise they are unhappy and may delete it.
+
+Testers and developers can use performance tests to discover potential bottlenecks in their software application. Normally, performance testing is done on servers or backend systems to check how the systems or software can handle huge numbers of requests, to meet acceptable results for the users.
+
+Performance tests must be executed in a defined state of the application with hardware resources that are equal to the live backend environment. The collected data must then be analyzed to find possible bottlenecks and problems in the software. Performance testing is a complex topic that should never be underestimated or postponed to the end of the project; it should be done as early
+as possible. Key performance figures should be part of the requirements phase of app development in order to start planning right from the beginning.
+
+For mobile apps, performance tests are more complex and need to cover more systems in order to get meaningful results that improve performance.
+
+The typical mobile app relies on a backend system (server) with which it communicates. The app sends requests to the server, which then handles those requests and sends back a response. To send a simple request to a backend system, there are three critical performance areas that need to be covered:
+- The server
+- The mobile data networks
+- The mobile device and app itself
+
+To test the performance of mobile apps, you need to performance-test at least the backend system and the app itself. It is not possible to test the performance of the mobile data networks, and it makes no sense for you as a mobile tester. The network speed and latency can be simulated during the testing phase, but the network speed will be totally different while a user is on the move in real data networks.
+
+Keep the backend system performance in mind and look for further information on the Internet. There are plenty of good tools available to help you set up a performance testing suite. If you want to do performance testing within your project and use tools to do so, keep the following steps in mind as they will help you to define a clear strategy:
+
+1. Plan performance tests early in the development phase.
+2. Design the performance tests for your app.
+3. Prepare test data and infrastructure (these should be the same as for the live environment).
+4. Execute the performance tests.
+5. Collect, analyze, and evaluate the data.
+6. Find potential bottlenecks and refine the app.
+7. Monitor the application changes again to see if the refinements were good enough.
+
+My job, as a Software Quality Engineer, is to focus on performance testing of the mobile app itself.
+
+### Mobile App Performance Testing
+When testing the performance of a mobile app, keep it simple and focus on the
+UI of the app. For example, use a stopwatch and measure the application launch
+or the delays between certain operations. Measure the loading time of the
+content such as images, text, or animations that need to be created or processed
+by the app. Perform those tests several times and note the performed steps in
+order to reproduce and track possible performance issues. Also, write down how
+often the problem occurred. If it happens all the time, that’s fine; that is an easy
+fix. But some problems, especially performance problems, may happen only
+three out of ten times. It’s therefore important to find the bug and reproduce the
+behavior.
+
+While testing the app, write down everything that seems slow as it could be a
+potential performance issue. Manual performance testing should be done on
+several devices with different hardware specifications in order to get meaningful
+results.
+
+Another test that should be done is a comparison between the current app
+version that is live and available for download in the app stores and the new
+release candidate app. Compare both versions in terms of app launch time and all
+other areas. The new release candidate should not be slower than the current
+version; otherwise the app will get bad feedback from users.
+<img src="https://user-images.githubusercontent.com/70295997/213014304-311fdc7c-1451-405d-8e21-cd5ade4465fc.png" width=600>
+
+If your app contains third-party elements such as advertising or news feeds, check that those elements have no impact on the performance of the app. As an example, you can use a Web proxy tool like Charles Proxy or Fiddler to send the 3rd-party request to a time-out to see that it has no impact on the app’s performance.
+
+Another way to test the performance of the app is to profile and measure the process and operation time of the code. There are plenty of profiler tools available to check the app code for potential bottlenecks and performance issues. This task should be done by the developers, so encourage them to use such tools.
+
+To summarize the simple mobile app performance tests:
+- Measure the app’s launch time.
+- Check for delays during operations or user interactions.
+- Measure the loading time of the content.
+- Note everything that seems slow.
+- Test on different hardware, especially on slower phones.
+- Compare the live app version with the new release candidate.
+- Check for third-party elements.
+- Use profiling tools to measure the process and operation time of methods
+and classes.
+
+These are simple steps to test the performance of a mobile app. If you want more complex and detailed data about the performance of the app, the backend, and the data networks, you’ll need to use a performance testing tool or solution that covers all parts. There are plenty of mobile app performance providers available, so search for them on the Internet and see which one best fits your development and test environment.
+
 <img width="800" alt="image" src="https://user-images.githubusercontent.com/70295997/212999590-58796168-0ae9-4222-9560-29cc411adcd0.png">
 
 ## Smoke testing
