@@ -29,27 +29,13 @@ Keep the backend system performance in mind and look for further information on 
 My job, as a Software Quality Engineer, is to focus on performance testing of the mobile app itself.
 
 ### Mobile App Performance Testing
-When testing the performance of a mobile app, keep it simple and focus on the
-UI of the app. For example, use a stopwatch and measure the application launch
-or the delays between certain operations. Measure the loading time of the
-content such as images, text, or animations that need to be created or processed
-by the app. Perform those tests several times and note the performed steps in
-order to reproduce and track possible performance issues. Also, write down how
-often the problem occurred. If it happens all the time, that’s fine; that is an easy
-fix. But some problems, especially performance problems, may happen only
-three out of ten times. It’s therefore important to find the bug and reproduce the
-behavior.
+When testing the performance of a mobile app, keep it simple and focus on the UI of the app. For example, use a stopwatch and measure the application launch or the delays between certain operations. Measure the loading time of the content such as images, text, or animations that need to be created or processed by the app. Perform those tests several times and note the performed steps in order to reproduce and track possible performance issues. Also, write down how often the problem occurred. If it happens all the time, that’s fine; that is an easy fix. But some problems, especially performance problems, may happen only three out of ten times. It’s therefore important to find the bug and reproduce the behavior.
 
-While testing the app, write down everything that seems slow as it could be a
-potential performance issue. Manual performance testing should be done on
-several devices with different hardware specifications in order to get meaningful
-results.
+While testing the app, write down everything that seems slow as it could be a potential performance issue. Manual performance testing should be done on
+several devices with different hardware specifications in order to get meaningful results.
 
-Another test that should be done is a comparison between the current app
-version that is live and available for download in the app stores and the new
-release candidate app. Compare both versions in terms of app launch time and all
-other areas. The new release candidate should not be slower than the current
-version; otherwise the app will get bad feedback from users.
+Another test that should be done is a comparison between the current app version that is live and available for download in the app stores and the new
+release candidate app. Compare both versions in terms of app launch time and all other areas. The new release candidate should not be slower than the current version; otherwise the app will get bad feedback from users.
 <img src="https://user-images.githubusercontent.com/70295997/213014304-311fdc7c-1451-405d-8e21-cd5ade4465fc.png" width=600>
 
 If your app contains third-party elements such as advertising or news feeds, check that those elements have no impact on the performance of the app. As an example, you can use a Web proxy tool like Charles Proxy or Fiddler to send the 3rd-party request to a time-out to see that it has no impact on the app’s performance.
@@ -69,7 +55,18 @@ and classes.
 
 These are simple steps to test the performance of a mobile app. If you want more complex and detailed data about the performance of the app, the backend, and the data networks, you’ll need to use a performance testing tool or solution that covers all parts. There are plenty of mobile app performance providers available, so search for them on the Internet and see which one best fits your development and test environment.
 
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/70295997/212999590-58796168-0ae9-4222-9560-29cc411adcd0.png">
+# Types of Performance Testing
+
+<img width="800" alt="image" src="https://user-images.githubusercontent.com/70295997/213017758-b5c5e076-a362-466d-9942-a2fcbb28b461.png">
+
+You can use the same test logic for multiple test types. The only thing that changes is the test workload configuration.
+Each test type teaches you something different about your system.
+- Smoke tests verify that your system can handle minimal load, without any problems.
+- Load tests assess system performance in terms of concurrent users or requests per second.
+- Stress and Spike tests assess the limits and stability of your system under extreme conditions.
+- Soak tests assess the reliability and performance of your system over an extended period of time.
+
+Start with a Smoke test and see how easy it is to run your first load test! After you know that the script works and the system responds to minimal load correctly, you can move on to other test types.
 
 ## Smoke testing
 
