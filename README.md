@@ -89,7 +89,7 @@ Once your smoke test shows zero errors, you can go to the next step and execute 
 
 ## Load testing
 
-Load Testing is primarily concerned with assessing the current performance of your system in terms of concurrent users or requests per second.
+Load Testing is primarily concerned with assessing the current __system performance in terms of concurrent users or requests per second__.
 
 When you want to understand if your system is meeting the performance goals, this is the type of test you'll run.
 <img width="800" alt="Screenshot 2023-01-17 at 12 14 18 PM" src="https://user-images.githubusercontent.com/70295997/213002223-6b982cab-b35e-4a3c-a62b-15d3627fbbd3.png">
@@ -129,7 +129,7 @@ If your system crashes under a load test, it means that your load test has morph
 
 Stress testing is one of the many different types of load testing.
 
-While load testing is primarily concerned with assessing the systems performance, the purpose of stress testing is to assess the availability and stability of the system under heavy load.
+While load testing is primarily concerned with assessing the systems performance, the purpose of stress testing is to assess the __availability and stability of the system under heavy load__.
 
 ### What is stress testing?
 Stress Testing is a type of load testing used to determine the limits of the system. The purpose of this test is to verify the stability and reliability of the system under __extreme conditions__.
@@ -195,6 +195,12 @@ Here's a config code snippet for a spike test. As with stress testing, <code>ram
 <img width="600" alt="Screenshot 2023-01-17 at 1 33 51 PM" src="https://user-images.githubusercontent.com/70295997/213017010-39122080-1b02-4b68-8b72-21408e04d315.png">
 
 ∴ Stress and spike testing help you prepare for the extreme conditions your system will inevitably encounter in production. Preparing for the inevitable is a sign of maturity in a technical organization. Stress testing not only makes your system more reliable but also decreases the stress level of your Ops and Dev teams. Once your system is stress-proof, you may want to run a soak test to see if other reliability issues don't surface over an extended period.
+
+## Soak Testing
+
+While load testing is primarily concerned with performance assessment, and stress testing is concerned with system stability under extreme conditions, soak testing is concerned with __reliability over a longer period of time__.
+
+...
 
 ----
 
