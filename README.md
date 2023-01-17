@@ -36,7 +36,8 @@ several devices with different hardware specifications in order to get meaningfu
 
 Another test that should be done is a comparison between the current app version that is live and available for download in the app stores and the new
 release candidate app. Compare both versions in terms of app launch time and all other areas. The new release candidate should not be slower than the current version; otherwise the app will get bad feedback from users.
-<img src="https://user-images.githubusercontent.com/70295997/213014304-311fdc7c-1451-405d-8e21-cd5ade4465fc.png" width=600>
+
+💥 The comparison should be done on the same hardware; otherwise the results will differ.
 
 If your app contains third-party elements such as advertising or news feeds, check that those elements have no impact on the performance of the app. As an example, you can use a Web proxy tool like Charles Proxy or Fiddler to send the 3rd-party request to a time-out to see that it has no impact on the app’s performance.
 
@@ -204,12 +205,17 @@ While load testing is primarily concerned with performance assessment, and stres
 
 ----
 
+🔗 References:
 
-[18 Top Computer Stress Test Software To Test CPU, RAM And GPU [2023 LIST]](https://www.softwaretestinghelp.com/computer-stress-test-software/)
+1. [18 Top Computer Stress Test Software To Test CPU, RAM And GPU [2023 LIST]](https://www.softwaretestinghelp.com/computer-stress-test-software/)
 
-[15 Best Free CPU Stress Test Software For Windows](https://listoffreeware.com/free-cpu-stress-test-software-windows/)
+2. [15 Best Free CPU Stress Test Software For Windows](https://listoffreeware.com/free-cpu-stress-test-software-windows/)
 
-[Grafana k6](https://k6.io/docs/): [Examples & Tutorials](https://k6.io/docs/examples/) and [Automated performance testing](https://k6.io/docs/testing-guides/automated-performance-testing/)
+3. [Grafana k6](https://k6.io/docs/): [Examples & Tutorials](https://k6.io/docs/examples/) and [Automated performance testing](https://k6.io/docs/testing-guides/automated-performance-testing/)
+
+4. _Hands-On Mobile App Testing: A Guide for Mobile Testers and Anyone Involved in the Mobile App Business_ by _Daniel Knott_. ISBN 978-0-13-419171-3. 2015 Pearson Education, Inc.
+
+
 
 
 
