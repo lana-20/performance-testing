@@ -166,11 +166,38 @@ For stress tests, for example, when using JS scripts in Grafana k6, <code>rampin
 
 <img width="600" alt="Screenshot 2023-01-17 at 12 52 05 PM" src="https://user-images.githubusercontent.com/70295997/213009780-e41007ba-3c42-4e1b-bd8e-7b3c4a6c6175.png">
 
+If your infrastructure is configured to auto-scale, this test will help you to determine:
+- How quickly the auto-scaling mechanisms react to increased load.
+- Whether any failures happen during scaling events.
+The point of the recovery stage is to determine if the system can serve requests once the load decreases to a normal level. If you are testing auto-scaling, you may want to scale down in steps as well to determine if down-scaling is working as you expect it to.
 
+### Spike Testing
+Spike testing is a type of stress testing that immediately overwhelms the system with an extreme surge of load.
 
+Spike testing is a variation of a stress testing, but it does not gradually increase the load. Instead it spikes to extreme load over a very short period of time. While a stress test allows the SUT (System Under Test) to gradually scale up its infrastructure, a spike test does not.
 
+Execute spike tests to determine:
+- How your system will perform under a sudden surge of traffic.
+- Whether your system will recover once the traffic has subsided.
+A classic need for a spike testing is if you've bought advertising on a big television event, such as the Super Bowl or a popular singing competition, which will cause a large number of people to see your advertisement and immediately visit your website. If you haven't tested for this scenario and made performance optimizations in advance, the extra traffic can end up being a marketing disaster instead of a great success.
 
+Another typical example is a "HackerNews hug of death": someone links to your website on one of the popular internet forums, like Reddit or HackerNews, which brings thousands of people to your system at once.
 
+Success or failure of a spike test depends on your expectations. Systems generally react in 4 different ways:
+- Excellent: system performance is stable during the surge of traffic. Response time is similar during low traffic and high traffic.
+- Good: Response time is slower, but the system does not produce any errors. All requests are handled.
+- Poor: The system produces errors during the surge of traffic, but recovers to normal after the traffic subsides.
+- Bad: System crashes, and does not recover after the traffic subsides.
+
+### API Spike Test
+
+Remember that the point of this test is to suddenly overwhelm the system. Don't be afraid to increase the number of VUs beyond your worst-case prediction. Depending on your needs, you may want to extend the recovery stage to 10 or more minutes to see when the system finally recovers.
+
+Here's a config code snippet for a spike test. As with stress testing, <code>ramping-arrival-rate</code> is a good executor for a spike test.
+
+<img width="600" alt="Screenshot 2023-01-17 at 1 33 51 PM" src="https://user-images.githubusercontent.com/70295997/213017010-39122080-1b02-4b68-8b72-21408e04d315.png">
+
+∴ Stress and spike testing help you prepare for the extreme conditions your system will inevitably encounter in production. Preparing for the inevitable is a sign of maturity in a technical organization. Stress testing not only makes your system more reliable but also decreases the stress level of your Ops and Dev teams. Once your system is stress-proof, you may want to run a soak test to see if other reliability issues don't surface over an extended period.
 
 ----
 
@@ -179,9 +206,7 @@ For stress tests, for example, when using JS scripts in Grafana k6, <code>rampin
 
 [15 Best Free CPU Stress Test Software For Windows](https://listoffreeware.com/free-cpu-stress-test-software-windows/)
 
-[Grafana k6](https://k6.io/docs/)
-
-[Examples & Tutorials](https://k6.io/docs/examples/)
+[Grafana k6](https://k6.io/docs/): [Examples & Tutorials](https://k6.io/docs/examples/) and [Automated performance testing](https://k6.io/docs/testing-guides/automated-performance-testing/)
 
 
 
